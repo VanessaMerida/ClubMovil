@@ -22,21 +22,7 @@ export default function AuthNavegacion() {
                 component={PantallaRegistro} 
                 options={{ title: 'Registrarse'}} 
             />
-            <Stack.Screen 
-                name="ListarAsociado" 
-                component={PantallaAsociado} 
-                options={{ title: 'Listar Asociados'}} 
-            />
-            <Stack.Screen
-                name="DetalleAsociado" 
-                component={PantallaDetalleAsociado} 
-                options={{ title: 'Detalle Asociado'}}
-            />
-            <Stack.Screen
-                name="EditarAsociado" 
-                component={PantallaEditarAsociado} 
-                options={{ title: 'Editar Asociado'}}
-            />
+            
         </Stack.Navigator>
     );
 }

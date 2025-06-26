@@ -10,6 +10,8 @@ import PerfilStack from './Stacks/PerfilStack';
 import ConfiguracionStack from './Stacks/ConfiguracionStack';
 import ParticipacionesStack from './Stacks/ParticipacionesStack';
 import PrestamosStack from './Stacks/PrestamosStack';
+import LoginScreen from '../../Screen/Auth/Login';
+import RegistroScreen from '../../Screen/Auth/Registro';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -58,6 +60,15 @@ function Tabs() {
           ),
         }}
       />
+      <Tab.Screen
+        name="Iniciar Sesion"
+        component={LoginScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="settings" size={size} color={color} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
@@ -71,6 +82,7 @@ export default function NavegacionPrincipal() {
       <Stack.Screen name="Participaciones" component={ParticipacionesStack} />
       <Stack.Screen name="Actividades" component={ActividadesStack} />
       <Stack.Screen name="Prestamos" component={PrestamosStack} />
+      <Stack.Screen name="Registro" component={RegistroScreen} />
     </Stack.Navigator>
   );
 }
